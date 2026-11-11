@@ -55,4 +55,102 @@ body {
   background: var(--bg);
   cursor: pointer;
   font: inherit;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+main {
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.grid {
+
+  display: grid;
+  grid-template-columns: repeat(
+
+    auto-fit,
+    minmax(260px, 1fr)
+  );
+  gap: 1rem;
+}
+
+.card {
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--bg);
+  transition: box-shadow 0.15s;
+}
+
+.card:hover {
+
+  box-shadow: 0 2px 8px var(--fg);
+}
+
+.card a {
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.tag {
+
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 1000px;
+  background: var(--bg);
+  color: var(--accent);
+  margin: 2px;
+}
+
+.block {
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.block h3 {
+ 
+  margin-top: 0;
+}
+
+.media-box {
+
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.filters {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input, select {
+
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+
+  .filters {
+
+    flex-direction: column;
+  }
 }
