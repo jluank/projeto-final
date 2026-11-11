@@ -2,7 +2,57 @@
 
   --fg: #1a1a1a;
   --bg: #fff;
-  --muted: #678;
+  --muted: #777;
   --accent: #800;
-  --border: #def;
+  --border: #ccc;
+}
+
+* {
+
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.topbar {
+
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.topbar nav {
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.topbar a {
+
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar button {
+
+  padding: 0.4rem .8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  cursor: pointer;
+  font: inherit;
 }
