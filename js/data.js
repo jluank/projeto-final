@@ -121,5 +121,125 @@ const TOPICS = [
         body: "Remember that questions with does use the base form of the main verb."
       }
     ]
+  },
+
+  {
+    id: "past-tense",
+    title: "Past Tense",
+    summary: "Learn how to talk about completed actions and events in the past.",
+
+    age: ["teens", "adults"],
+    level: ["elementary", "intermediate"],
+    skill: ["speaking", "reading", "writing"],
+    resource: ["text", "game", "visual"],
+    mode: ["group", "one-on-one"],
+
+    blocks: [
+
+      {
+        type: "tip",
+        title: "Regular Verbs",
+        body: "Most regular verbs form the past tense by adding -ed."
+      },
+
+      {
+        type: "activity",
+        title: "Yesterday's Activities",
+        body: "Ask students to write five sentences about what they did yesterday."
+      },
+
+      {
+        type: "media",
+        title: "Past Events",
+        body: "Watch a short video about historical events and identify past tense verbs.",
+        media: "video"
+      },
+
+      {
+        type: "note",
+        title: "Irregular Verbs",
+        body: "Irregular verbs do not follow the regular -ed pattern. Students should learn their different forms."
+      }
+    ]
+  },
+
+  {
+    id: "comparatives",
+    title: "Comparatives",
+    summary: "Learn how to compare people, objects and places using comparative adjectives.",
+
+    age: ["children", "teens", "adults"],
+    level: ["elementary"],
+    skill: ["speaking", "reading"],
+    resource: ["visual", "game", "text"],
+    mode: ["group", "one-on-one"],
+
+    blocks: [
+
+      {
+        type: "tip",
+        title: "Short Adjectives",
+        body: "Many short adjectives form comparatives by adding -er, such as tall and taller."
+      },
+
+      {
+        type: "activity",
+        title: "Compare Objects",
+        body: "Show students pictures of two objects and ask them to compare their characteristics."
+      },
+
+      {
+        type: "media",
+        title: "Visual Comparison",
+        body: "Use images of different animals to practice comparative adjectives.",
+        media: "image"
+      },
+
+      {
+        type: "note",
+        title: "Long Adjectives",
+        body: "Longer adjectives generally use more before the adjective, such as more interesting."
+      }
+    ]
+  },
+
+  {
+    id: "prepositions-of-place",
+    title: "Prepositions of Place",
+    summary: "Learn how to describe the position of objects and people using prepositions of place.",
+
+    age: ["children", "teens"],
+    level: ["beginner", "elementary"],
+    skill: ["speaking", "listening"],
+    resource: ["visual", "game", "text"],
+    mode: ["group", "one-on-one"],
+
+    blocks: [
+
+      {
+        type: "tip",
+        title: "Common Prepositions",
+        body: "Learn the basic meanings and uses of in, on, under, behind, next to and between."
+      },
+
+      {
+        type: "activity",
+        title: "Where Is the Object?",
+        body: "Place objects around the classroom and ask students to describe their positions."
+      },
+
+      {
+        type: "media",
+        title: "Position Practice",
+        body: "Use an image of a room to identify the positions of different objects.",
+        media: "image"
+      },
+
+      {
+        type: "note",
+        title: "Sentence Structure",
+        body: "Use the verb to be followed by a preposition of place to describe an object's position."
+      }
+    ]
   }
 ];
