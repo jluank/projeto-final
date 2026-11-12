@@ -174,8 +174,8 @@ function applyFilters() {
 
     const matchesSearch = 
       !query || 
-      topic.title.toLowerCase().includes(q) ||
-      topic.summary.toLowerCase().includes(q);
+      topic.title.toLowerCase().includes(query) ||
+      topic.summary.toLowerCase().includes(query);
 
     const matchesAge = 
       !age || topic.age.includes(age);
