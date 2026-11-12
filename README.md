@@ -19,16 +19,22 @@ Gerenciador de tópicos de ensino de inglês. Aplicação web estática para org
 
 ## Estrutura
 
+```
 projeto-final-main/
-├── index.html              # Página principal (lista + filtros)
-├── topic.html              # Visualização dinâmica de tópico
+│
+├── index.html              → Página principal (lista + filtros)
+├── topic.html              → Visualização dinâmica de tópico
+│
 ├── topics/
-│   └── verb-to-be.html     # Exemplo de página estática de tópico
+│   └── verb-to-be.html     → Exemplo de página estática de tópico
+│
 ├── css/
-│   └── style.css           # Estilos
+│   └── style.css           → Estilos
+│
 └── js/
-├── data.js             # Dados dos tópicos, filtros e textos da UI
-└── app.js              # Lógica de renderização, filtros e idioma
+    ├── data.js             → Dados dos tópicos, filtros e textos da UI
+    └── app.js              → Lógica de renderização, filtros e idioma
+```
 
 ## Dados
 
