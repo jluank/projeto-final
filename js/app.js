@@ -56,6 +56,40 @@ function fillSelects() {
   })
 }
 
+function renderTopic() {
+
+  const id = new URLSearchParams(location.search).get("id");
+  const topic = TOPICS.find(t => t.id === id);
+
+  const  content = document.getElementById("topic-content");
+  const  notFound = document.getElementById("not-found");
+
+  const  title = document.getElementById("topic-title");
+  const  summary = document.getElementById("topic-summary");
+  const  tags = document.getElementById("topic-tags");
+  const  blocks = document.getElementById("blocks");
+
+  if(!topic) {
+
+    content.hidden = true;
+    notFound.hidden = false;
+
+    return;
+  }
+
+  title.textContent = topic.title;
+  summary.textContent = topic.summary;
+
+  const topicTags = [...topic.level, ...topic.skill];
+
+  tags.innerHTML = topicTags.map(tag => {
+
+    return `<span class="tag">${tag}</span>`;
+  }).join("");
+
+  blocks.innerHTML = topic.blocks.map(renderBlock).join("");
+}
+
 
 if(document.getElementById("topic-grid")) {
 
