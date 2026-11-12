@@ -160,12 +160,81 @@ function renderBlock(block) {
   }
 }
 
+function applyFilters() {
+
+  const query = document.getElementById("search").value.toLowerCase();
+
+  const age = document.getElementById("filter-age").value;
+  const level = document.getElementById("filter-level").value;
+  const skill = document.getElementById("filter-skill").value;
+  const resource = document.getElementById("filter-resource").value;
+  const mode = document.getElementById("filter-mode").value;
+
+  const filtered = TOPICS.filter(topic => {
+
+    const matchesSearch = 
+      !query || 
+      topic.title.toLowerCase().includes(q) ||
+      topic.summary.toLowerCase().includes(q);
+
+    const matchesAge = 
+      !age || topic.age.includes(age);
+  
+    const matchesLevel = 
+      !level || topic.level.includes(level);
+      
+    const matchesSkill = 
+      !skill || topic.skill.includes(skill);
+      
+    const matchesResource = 
+      !resource || topic.resource.includes(resource);
+      
+    const matchesMode = 
+      !mode || topic.mode.includes(mode);   
+      
+    return (
+
+      matchesSearch &&
+      matchesAge &&
+      matchesLevel &&
+      matchesSkill &&
+      matchesResource &&
+      matchesMode
+    )
+
+    });
+
+    renderCards(filtered);
+
+    if(filtered.length === 0) {
+
+      document.getElementById("topic-grid").innerHTML = `<p>No topics match.</p>`;
+    }
+}
+
 
 if(document.getElementById("topic-grid")) {
 
   fillSelects();
 
   renderCards(TOPICS);
+
+  document.getElementById("search").addEventListener("input", applyFilters);
+
+  const filterIds = [
+
+    "filter-age",
+    "filter-level",
+    "filter-skill",
+    "filter-resource",
+    "filter-mode"
+  ];
+
+  filterIds.forEach(id => {
+
+    document.getElementById(id).addEventListener("change", applyFilters);
+
+  });
 }
 
 if (document.getElementById("topic-title")) {
@@ -173,4 +242,3 @@ if (document.getElementById("topic-title")) {
   renderTopic();
 }
 
-  
