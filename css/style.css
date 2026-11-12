@@ -226,3 +226,9 @@ input, select {
   font-size: 1.2rem;
   color: var(--muted);
 }
+
+.no-results {
+
+  color: var(--muted);
+  padding: 1rem 0;
+}

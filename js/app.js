@@ -208,7 +208,7 @@ function applyFilters() {
 
     if(filtered.length === 0) {
 
-      document.getElementById("topic-grid").innerHTML = `<p>No topics match.</p>`;
+      document.getElementById("topic-grid").innerHTML = `<p class="no-results">No topics match.</p>`;
     }
 }
 
