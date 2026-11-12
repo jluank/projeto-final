@@ -43,7 +43,7 @@ function fillSelects() {
 
     const select = document.getElementById(filter.id);
 
-    select.innerHTML = '<option value="">All</option>';
+    select.innerHTML = `<option value="">${UI[currentLang].all}</option>`;
 
     filter.values.forEach(value => {
 
@@ -210,7 +210,7 @@ function applyFilters() {
 
     if(filtered.length === 0) {
 
-      document.getElementById("topic-grid").innerHTML = `<p class="no-results">No topics match.</p>`;
+      document.getElementById("topic-grid").innerHTML = `<p class="no-results">${UI[currentLang].noResults}</p>`;
     }
 }
 
@@ -255,6 +255,22 @@ function setLang(lang) {
 
     document.title = UI[lang].title;
   }
+}
+
+const savedLang = localStorage.getItem("lang") === "pt" ? "pt" : "en";
+
+setLang(savedLang);
+
+const langToggle = document.getElementById("lang-toggle");
+
+if(langToggle) {
+
+  langToggle.addEventListener("click", () => {
+
+    const nextLang = currentLang === "en" ? "pt" : "en";
+
+    setLang(nextLang);
+  });
 }
 
 if(document.getElementById("topic-grid")) {
