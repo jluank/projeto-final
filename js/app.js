@@ -90,6 +90,76 @@ function renderTopic() {
   blocks.innerHTML = topic.blocks.map(renderBlock).join("");
 }
 
+function renderBlock(block) {
+
+  switch(block.type) {
+
+    case "tip":
+
+      return `
+      
+        <div class="block">
+
+          <h3>Tip - ${block.title}</h3>
+
+          <p>${block.body}</p>
+
+        </div>
+      
+      `;
+
+    case "activity":
+
+      return `
+
+        <div class="block">
+
+          <h3>Activity - ${block.title}</h3>
+
+          <p>${block.body}</p>
+
+        </div>        
+
+      `;
+
+    case "media":
+
+      return `
+
+        <div class="block">
+
+          <h3>Media - ${block.title}</h3>
+
+          <p>${block.body}</p>
+
+          <div class="media-box">
+            [${block.media} placeholder]
+          </div>
+
+        </div>        
+
+      `;
+
+    case "note":
+
+      return `
+
+        <div class="block">
+
+          <h3>Note - ${block.title}</h3>
+
+          <p>${block.body}</p>
+
+        </div>        
+
+      `;
+    
+    default:
+
+      return "";
+  }
+}
+
 
 if(document.getElementById("topic-grid")) {
 
@@ -97,3 +167,10 @@ if(document.getElementById("topic-grid")) {
 
   renderCards(TOPICS);
 }
+
+if (document.getElementById("topic-title")) {
+
+  renderTopic();
+}
+
+  
