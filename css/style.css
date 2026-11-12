@@ -154,3 +154,47 @@ input, select {
     flex-direction: column;
   }
 }
+
+#page-title {
+
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+#search {
+
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.fiter-item {
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filter-item label {
+
+  font-size: 0.85;
+  font-weight: 600;
+}
+
+.card {
+
+  display: block;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.card h2 {
+
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
