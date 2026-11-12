@@ -1,3 +1,5 @@
+let currentLang = "en";
+
 function renderCards(list) {
 
   const grid = document.getElementById("topic-grid");
@@ -212,6 +214,48 @@ function applyFilters() {
     }
 }
 
+function setLang(lang) {
+
+  currentLang = lang;
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+
+    el.textContent = el.dataset[lang];
+  });
+
+  const search = document.getElementById("search");
+
+  if (search) {
+
+    search.placeholder = UI[lang].search;
+  }
+
+  document.querySelectorAll(".filters select").forEach(select => {
+
+    if (select.options.length > 0) {
+
+      select.options[0].textContent = UI[lang].all;
+    }
+  });
+
+  document.documentElement.lang = lang;
+
+  localStorage.setItem("lang", lang);
+
+  const button = document.getElementById("lang-toggle");
+
+  if(button) {
+
+    button.textContent = lang === "en" ? "PT" : "EN";
+  }
+
+  const pageTitle = document.getElementById("page-title");
+
+  if(pageTitle) {
+
+    document.title = UI[lang].title;
+  }
+}
 
 if(document.getElementById("topic-grid")) {
 
