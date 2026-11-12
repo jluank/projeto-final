@@ -198,3 +198,31 @@ input, select {
   color: var(--muted);
   margin-bottom: 0.75rem;
 }
+
+#topic-title {
+
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+#topic-summary {
+
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+#topic-tags {
+
+  margin-bottom: 1.5rem;
+}
+
+.block p {
+
+  line-height: 1.5;
+}
+
+#not-found {
+
+  font-size: 1.2rem;
+  color: var(--muted);
+}
